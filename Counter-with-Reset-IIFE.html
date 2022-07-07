@@ -1,0 +1,34 @@
+
+
+<html>
+<button onclick="counts()">Count</button>
+<button onclick="reset()">Reset</button>
+<p id="output">0</p>
+</html>
+
+<script>
+// Menggunakan IIFE (Immediately Invoke Function Expression)
+
+let counts = (function(){
+
+let counter = 0;
+	function add(reset = false){
+		if(reset){
+	   counter = 0;
+		}else{
+	   counter += 1;
+		}
+    return counter;
+	}
+  return add;
+})();
+
+function count(){
+ document.getElementById("output").textContent = counts();
+}
+
+function reset(){
+ document.getElementById("output").textContent = counts(true);
+} 
+
+</script>
