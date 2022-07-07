@@ -1,0 +1,30 @@
+
+
+<html>
+<button onclick="count()">Count</button>
+<button onclick="reset()">Reset</button>
+<p id="output">0</p>
+</html>
+
+<script>
+
+function add(){
+ let x = 0;
+ function adds(reset = false){
+  if(reset){ x = 0; }else{ x += 1;}
+  return x;
+ }
+ return adds;
+} 
+
+let total = add();
+
+function count(){
+ document.getElementById("output").textContent = total();
+}
+
+function reset(){
+ document.getElementById("output").textContent = total(true);
+}
+
+</script>
