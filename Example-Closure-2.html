@@ -1,0 +1,41 @@
+
+<p id="output1"></p>
+<p id="output2"></p>
+
+ <script>
+
+  function init1(){
+  let umur1 = 25;
+  function umurku(){
+    return `Umurku ${umur1} tahun.`
+  }
+  return umurku();
+}
+
+init1();
+   
+console.log(init1())
+//output: "Umurku 25 tahun." 
+document.getElementById("output1").textContent = init1();    
+
+let umur2 = 25
+  function init2(){
+  umur2 = 27;
+  function umurku(){
+    return `Umurku ${umur2} tahun.`
+  }
+  return umurku();
+}
+
+init2();
+document.getElementById("output2").textContent = init2();     
+console.log(init2())
+//output: "Umurku 27 tahun."   
+   
+</script>
+
+
+
+
+
+
