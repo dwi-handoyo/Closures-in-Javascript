@@ -18,17 +18,14 @@ This to show lexical scope which is very important in closures (1) and the closu
 
 #1 Function Expression without IIFE (Immediately Invoke Function Expression)
 
-   let add = function() {
+      let add = function() {
 
-      let counter = 0;
- 
-      return function(){     
- 
+         let counter = 0;
+         return function(){     
          return ++counter;  
- 
-     }
+         }
 
-  }
+      }
   
   let result = add();
 
